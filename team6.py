@@ -11,9 +11,9 @@ team_name = 'C.L.A.S.S.' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #SAMARTH'S CODE:
-'''def move(my_history, their_history, my_score, their_score):
+def move(my_history, their_history, my_score, their_score):
     if len(their_history) >= 1 and their_history[-3] == 'c':
         return 'b'  #If they have colluded for the last three turns then take advantage and betray them
     if len(their_history) >= 1 and their_history[-1] == 'c':
@@ -21,10 +21,8 @@ strategy_description = 'How does this strategy decide?'
     elif len(their_history) >= 1 and their_history[-1] == 'b':
         return 'b'  #If their last turn is betrayal then betray
     else:
-        return 'c' '''
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        return 'c'
 #AUDREY'S CODE: 
-'''def move(my_history, their_history, my_score, their_score) :
     if len(my_history)==0: #this will make it start off with colluding
         return 'c'
     elif len(my_history) >= 1 and my_history[-1]=='c' and their_history[-1]=='b':
@@ -34,24 +32,21 @@ strategy_description = 'How does this strategy decide?'
     elif my_history == 25 and my_score < 100:
         return 'b'
     else:
-        return 'c' '''
+        return 'c'
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------     
 #LIPITHA'S CODE:
-'''def move(my_history, their_history, my_score, their_score):
     if len(my_history)==0: # It's the first round; betray.
         return 'c'
     else:
-        return 'b' #Else Betray '''
+        return 'b' #Else Betray
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
 #SAMENTHA'S CODE:
-'''def move(my_history, their_history, my_score, their_score):
     if len(my_history)%2 == 0:
         return 'b'
     else:
-        return 'c'  '''
+        return 'c'
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
 #CAITLYN'S CODE:
-'''def move(my_history, their_history, my_score, their_score):
     def total_b(their_history):
         total_b = 0
         for turn in their_history:
@@ -68,15 +63,9 @@ strategy_description = 'How does this strategy decide?'
         elif my_history[-1] == 'c' and their_history[-1] == 'b':
             return 'b'
         else:
-            return 'c'  '''
+            return 'c'
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
-    
-    
-    
-    
-    
-    
-    
+      
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
